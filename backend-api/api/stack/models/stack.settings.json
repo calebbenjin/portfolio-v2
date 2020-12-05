@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stacks",
+  "info": {
+    "name": "stack",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "stacks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "stacks.tech-stack",
+      "required": true
+    }
+  }
+}

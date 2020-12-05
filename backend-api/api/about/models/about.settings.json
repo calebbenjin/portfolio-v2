@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "about"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "birthday": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "mail": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

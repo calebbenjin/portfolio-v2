@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "name": "experience",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "component",
+      "repeatable": true,
+      "component": "stacks.tech-stack",
+      "required": true
+    }
+  }
+}
