@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="nav" id="navbar">
       <div className="nav-content">
-        <h1 className="nav-logo" onClick={scrollToTop} >Cale<span>bb</span>enjin</h1>
+        <h1 className="nav-logo" >Cale<span>bb</span>enjin</h1>
         <ul className="nav-items">
           <li className="nav-item">
             <Link

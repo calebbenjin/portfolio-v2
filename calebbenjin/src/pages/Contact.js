@@ -1,10 +1,20 @@
 import React from 'react'
+import Layout from '../components/sections/Layout'
+import ImgSection from '../components/sections/ImgSection'
+import ContentSection from '../components/sections/ContentSection'
+import Navbar from '../components/coreUI/Navbar'
 
 const Contact = ({ title, subtitle, dark, id }) => {
   return (
-    <section className={"section" + (dark ? " section-dark" : "")}>
-      <h1>Hello from Contact Page</h1>
-    </section>
+    <Layout>
+      <ImgSection>
+        {/* <h1>Image Section</h1> */}
+      </ImgSection>
+      <ContentSection>
+        <Navbar />
+        <h2>Contact Page</h2>
+      </ContentSection>
+    </Layout>
   )
 }
 

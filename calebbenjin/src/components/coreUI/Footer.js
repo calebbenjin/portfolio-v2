@@ -1,4 +1,5 @@
 import React from 'react'
+import DownloadBtn from './DownloadBtn'
 
 const Footer = () => {
   return (
