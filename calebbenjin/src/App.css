@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&family=Rambla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryColor: #f68338;
+  --bgColor: #191919;
+  --DarkColor: #222;
+  --FontColor: #b7b7b7;
+  --WhiteColor: #fff;
+  --ff-primary: 'Mukta', sans-serif;
+  --ff-secondary: 'Rambla', sans-serif;
+  --ff-title: 'Oswald', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.3rem;
+  --radius: 0.35rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 700px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--bgColor);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+p {
+  font-family: var(--ff-secondary);
+  font-size: 15px;
+  line-height: 1.75em;
+  font-weight: 400;
+  color: #888;
+  margin: 0 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  position: sticky; 
+  top: 0;
+  /* overflow-y: hidden; */
+}
+
+.img-section {
+  background: #fff;
+  max-width: 100%;
+  width: 59em;
+  background: linear-gradient(to bottom,
+    rgba(34, 34, 34, 0.746), 
+    rgba(255, 255, 255, 0)), url(./asset/slider.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-section .logo-section {
+  /* background: rgba(51, 0, 51, 0.411); */
+  padding: 3em;
+}
+.img-section .logo{
+  width: 100px;
+}
+.content-section {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 3em 6em;
+}
+
+/* Navbar component */
+nav {
+  display: flex;
+  justify-content: flex-end
+}
+nav .navLink {
+  list-style: none;
+  margin: 10px 7em 0 0;
+}
+nav .navLink li{
+  display: inline;
+  margin-right: 2.5em;
+}
+nav .navLink li a{
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  text-decoration: none;
+  position: relative;
+  padding: 0;
+  font-family: var(--ff-title);
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  /* font-weight: bold; */
+  transition: var(--transition);
+}
+
+nav .navLink li a:hover {
+  color: var(--primaryColor);
+}
+
+
+/* Navbar component */
+
+/* Toggle component */
+.toggle {
+  color: var(--primaryColor);
+  font-size: 2em;
+  transition: var(--transition);
+}
+.toggle:hover {
+  color: var(--WhiteColor);
+}
+
+/* Title Component */
+.title  {
+  margin-bottom: 2em;
+}
+.title h5, h3{
+  line-height: 1.5em;
+  font-family: var(--ff-title);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.title h5 {
+  color: var(--primaryColor);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    position: relative;
+    overflow-y: scroll;
+  }
+  .img-section {
+    height: 50%;
+    width: 100%;
+  }
+  .content-section {
+    height: 50%;
+    overflow: visible;
+  }
+}
+
